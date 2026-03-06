@@ -1,0 +1,33 @@
+# SahelCast 🌱
+**AI-powered planting advisory system for smallholder farmers in Ouaddaï, Chad**
+
+Built by Adji Zamtato | Kansas State University | Agricultural Economics
+
+## What It Does
+SahelCast fuses free U.S. satellite data (CHIRPS, MODIS, SMAP) to tell 
+farmers in Ouaddaï, Chad exactly when to plant their millet and sorghum 
+crops — delivered as a simple RED/YELLOW/GREEN advisory via SMS.
+
+## Validation Results
+| Season | Date | Score | Status |
+|--------|------|-------|--------|
+| Dry Season | March 2026 | 0 🔴 | DO NOT PLANT ✅ |
+| Early Season | June 2023 | 1 🟡 | WAIT ✅ |
+| Peak Season | August 2023 | 2 🟢 | PLANT NOW ✅ |
+
+## Data Sources (All Free)
+- CHIRPS Daily Rainfall (USGS/UCSB)
+- MODIS NDVI MOD13Q1 (NASA)
+- SMAP Soil Moisture SPL3SMP_E (NASA)
+
+## Scripts
+1. `01_CHIRPS_Seasonal_Rainfall.js` — Seasonal rainfall mapping
+2. `02_Baseline_Anomaly_Detection.js` — 20-year baseline comparison
+3. `03_MODIS_NDVI_Stress.js` — Vegetation stress detection
+4. `04_SMAP_Soil_Moisture.js` — Soil moisture planting trigger
+5. `05_Planting_Advisory_Combined.js` — Final GREEN/YELLOW/RED output
+
+## Built With
+- Google Earth Engine (JavaScript API)
+- CHIRPS, MODIS, SMAP satellite datasets
+- Kansas State University computing resources
