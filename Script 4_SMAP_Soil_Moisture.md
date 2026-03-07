@@ -109,4 +109,3 @@ print('');
 print('Expected: SMAP image count = 30–60 images (June–Sept 2023)');
 print('Soil Moisture 2023 range: ~0.05 (dry) to ~0.35 (wet)');
 print('Dynamic threshold range: 0.10 (sandy N.Ouadda) to 0.18 (clay S.Ouadda)');
-
